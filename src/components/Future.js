@@ -6,31 +6,47 @@ const Future = () => {
         <View>   
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
                 <TouchableOpacity onPress={() => {}}>
-                    <View style={styles.cardStyle}>
-                        <Text>Local</Text>  
-                        <Text>Valor: R$42,99</Text>
-                        <Text>08/06/2020</Text>
+                    <View style={styles.cardStyle}>                        
+                        <View style={styles.cardHeaderStyle}>
+                            <Text style={styles.titleStyle}>Uber</Text>
+                        </View>  
+                        <View style={styles.infoViewStyle}>
+                            <Text style={styles.infoTextStyle}>Valor: R$8,29</Text>
+                            <Text style={styles.infoTextStyle}>08/06/2020</Text>
+                        </View>                        
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {}}>
                     <View style={styles.cardStyle}>
-                        <Text>Local</Text>
-                        <Text>Valor: R$42,99</Text>
-                        <Text>08/06/2020</Text>
+                        <View style={styles.cardHeaderStyle}>
+                            <Text style={styles.titleStyle}>Farmácia</Text>
+                        </View>
+                        <View style={styles.infoViewStyle}>
+                            <Text style={styles.infoTextStyle}>Valor: R$42,99</Text>
+                            <Text style={styles.infoTextStyle}>08/06/2020</Text>
+                        </View>  
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {}}>
                     <View style={styles.cardStyle}>
-                        <Text>Local</Text>
-                        <Text>Valor: R$42,99</Text>
-                        <Text>08/06/2020</Text>
+                        <View style={styles.cardHeaderStyle}>
+                            <Text style={styles.titleStyle}>Mercado</Text>
+                        </View>
+                        <View style={styles.infoViewStyle}>
+                            <Text style={styles.infoTextStyle}>Valor: R$12,99</Text>
+                            <Text style={styles.infoTextStyle}>09/06/2020</Text>
+                        </View>                        
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {}}>
                     <View style={styles.cardStyle}>
-                        <Text>Local</Text>
-                        <Text>Valor: R$42,99</Text>
-                        <Text>08/06/2020</Text>
+                        <View style={styles.cardHeaderStyle}>
+                            <Text style={styles.titleStyle}>Bar</Text>
+                        </View>
+                        <View style={styles.infoViewStyle}>
+                            <Text style={styles.infoTextStyle}>Valor: R$18,50</Text>
+                            <Text style={styles.infoTextStyle}>11/06/2020</Text>
+                        </View>
                     </View>
                 </TouchableOpacity>
             </ScrollView>
@@ -40,8 +56,8 @@ const Future = () => {
 
 const styles = StyleSheet.create({
     cardStyle : {
-        height: 100,
-        width: 120,
+        height: 110,
+        width: 130,
         margin: 10,
         justifyContent: 'space-between',
         marginBottom: 10,
@@ -53,12 +69,36 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.3,
         shadowRadius: 4,
-        elevation: 1,
+        elevation: 4,
     },
 
     listStyle : {
         justifyContent: 'space-between'
+    },
+
+    cardHeaderStyle : {
+        height : 20 ,
+        width : "100%",
+        backgroundColor : '#ccffda',
+        position: "absolute"        
+    },
+
+    titleStyle : {
+        fontWeight : 'bold',
+        marginLeft: 4
+    },
+
+    infoViewStyle : {
+        marginTop : 20,
+        justifyContent : 'space-around'
+    },
+
+    infoTextStyle : {
+        marginTop : 6,
+        marginLeft: 4,
     }
+
+
 })
 
 export default Future

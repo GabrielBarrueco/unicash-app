@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient';
 
 import Header from '../components/Header'
 import Future from '../components/Future'
@@ -7,18 +8,17 @@ import New from '../components/New'
 
 const home = () => {
     return(
-        <View style={styles.containerStyle}>
+        <LinearGradient colors={['#6cff95', '#1e524e']} style={styles.containerStyle}>
             <Header />
             <Future />
             <New />
-        </View>
+        </LinearGradient>
     )
 }
 
 const styles = StyleSheet.create({
     containerStyle : {
-        flex: 1,
-        backgroundColor: '#5cb654'
+        flex: 1        
     }
 })
 
