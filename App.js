@@ -4,9 +4,9 @@ import { NavigationContainer } from '@react-navigation/native'
 import Routes from './src/routes/routes'
 
 export default App = () => {
-  return (
-    <NavigationContainer>
-      <Routes />
-    </NavigationContainer>
-  )
+	return (
+		<NavigationContainer>
+			<Routes />
+		</NavigationContainer>
+	)
 }

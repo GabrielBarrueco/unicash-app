@@ -2,6 +2,9 @@ import React from 'react'
 import { View, StyleSheet, Text, TextInput, TouchableOpacity } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
+import Date from '../components/DatePicker'
+import DatePicker from '../components/DatePicker'
+
 const New = () => {
     return(
         <View style={styles.NewStyle} >
@@ -18,11 +21,7 @@ const New = () => {
                     <Feather name="dollar-sign" size={22}/>
                     <TextInput style={styles.DollarInputStyle} placeholder="Valor"/> 
                     
-                        <TouchableOpacity style={styles.calendarButtonStyle}>
-                            <View >
-                                <Feather name="calendar" size={22}/>
-                            </View>
-                        </TouchableOpacity>                                
+                    <DatePicker />                              
                 </View>   
 
                 <View style={styles.containerStyle}>                
@@ -72,7 +71,7 @@ const styles = StyleSheet.create({
     },
 
     cancelButtonStyle : {
-        backgroundColor: "#e02041",
+        backgroundColor: "#b3b3b3",
         borderRadius: 4,
         height: 50,
         width: "48%",
@@ -92,7 +91,7 @@ const styles = StyleSheet.create({
 
     DollarInputStyle : {
         height : 30,
-        width: '58%',
+        width: '38%',
         borderColor : '#DDD',
         borderWidth : 1,
         backgroundColor : '#FFF',
@@ -105,15 +104,6 @@ const styles = StyleSheet.create({
         marginTop: 16,
         flexDirection: 'row',
         marginHorizontal: 8,        
-    },
-
-    calendarButtonStyle : {
-        backgroundColor: "#4da6ff",
-        borderRadius: 4,
-        height: 30,
-        width: "28%",
-        justifyContent: "center",
-        alignItems: "center"
     },
 
     cardHeaderStyle : {

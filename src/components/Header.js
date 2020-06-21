@@ -14,7 +14,7 @@ const Header = () => {
 
 const styles = StyleSheet.create({
     headerStyle : {
-        marginTop: 40,
+        marginTop: 14,
         padding: 8,
         margin: 10 ,        
         justifyContent: 'space-between',
